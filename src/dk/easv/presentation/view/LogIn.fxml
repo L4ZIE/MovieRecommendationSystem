@@ -8,15 +8,15 @@
 <?import javafx.scene.layout.BorderPane?>
 
 <BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.LogInController">
-   <bottom>
+   <top>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="359.0" prefWidth="571.0" BorderPane.alignment="CENTER">
          <children>
             <MFXTextField id="txtField" layoutX="181.0" layoutY="130.0" prefHeight="50.0" prefWidth="210.0" stylesheets="@../css/login.css" />
             <MFXPasswordField id="txtField" layoutX="181.0" layoutY="196.0" prefHeight="50.0" prefWidth="210.0" stylesheets="@../css/login.css" />
             <MFXButton id="btn" buttonType="RAISED" layoutX="198.0" layoutY="268.0" prefHeight="30.0" prefWidth="70.0" stylesheets="@../css/login.css" text="Log - in" />
             <MFXButton id="btn" buttonType="RAISED" layoutX="300.0" layoutY="268.0" prefHeight="30.0" prefWidth="70.0" stylesheets="@../css/login.css" text="Sign - up" />
-            <Label id="title" layoutX="256.0" layoutY="71.0" stylesheets="@../css/login.css" text="SineZábava" />
+            <Label id="title" layoutX="14.0" layoutY="7.0" stylesheets="@../css/login.css" text="SineZábava" />
          </children>
       </AnchorPane>
-   </bottom>
+   </top>
 </BorderPane>
