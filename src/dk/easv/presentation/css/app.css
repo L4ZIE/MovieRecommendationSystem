@@ -1,0 +1,27 @@
+
+#btn {
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-width: 2;
+    -fx-border-color: #af1818;
+    -fx-effect: innershadow(gaussian, #af1818, 7, 0, 3, 3);
+    -fx-transition: background-color 0.3s, -fx-effect 0.3s, -fx-scale-x 0.3s, -fx-scale-y 0.3s;
+    -fx-text-fill: #af1818;
+
+}
+
+#btn:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-cursor: hand;
+}
+
+#txtField {
+    -fx-border-width: 2;
+    -fx-border-color: #af1818;
+    -fx-effect: innershadow(gaussian, #af1818, 7, 0, 3, 3);
+}
+
+.label{
+    -fx-font-family: "Eras Demi ITC";
+}
