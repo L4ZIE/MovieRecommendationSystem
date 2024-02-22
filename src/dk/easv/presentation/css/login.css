@@ -3,9 +3,9 @@
 #btn {
     -fx-background-radius: 30;
     -fx-border-radius: 30;
-    -fx-border-width: 2;
-    -fx-border-color: #af1818;
-    -fx-effect: innershadow(gaussian, #af1818, 7, 0, 3, 3);
+    -fx-border-width: 2,5;
+    -fx-border-color: #00bde3;
+    -fx-effect: innershadow(gaussian, #00bde3, 7, 0, 3, 3);
     -fx-transition: background-color 0.3s, -fx-effect 0.3s, -fx-scale-x 0.3s, -fx-scale-y 0.3s;
 
 }
@@ -17,13 +17,13 @@
 }
 
 #txtField {
-    -fx-border-width: 2;
-    -fx-border-color: #af1818;
-    -fx-effect: innershadow(gaussian, #af1818, 7, 0, 3, 3);
+    -fx-border-width: 2,5;
+    -fx-border-color: #00bde3;
+    -fx-effect: innershadow(gaussian, #00bde3, 9, 0, 4, 4);
 }
 
 #title {
-    -fx-text-fill: #af1818;
+    -fx-text-fill: #00bde3;
     -fx-font-family: "Eras Demi ITC";
     -fx-font-size: 50;
 }

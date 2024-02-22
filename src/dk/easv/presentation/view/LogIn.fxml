@@ -3,20 +3,25 @@
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
 <?import io.github.palexdev.materialfx.controls.MFXTextField?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
 <BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.LogInController">
-   <top>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="359.0" prefWidth="571.0" BorderPane.alignment="CENTER">
+   <bottom>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="460.0" style="-fx-background-color: #313349;" BorderPane.alignment="CENTER">
          <children>
-            <MFXTextField id="txtField" layoutX="181.0" layoutY="130.0" prefHeight="50.0" prefWidth="210.0" stylesheets="@../css/login.css" />
-            <MFXPasswordField id="txtField" layoutX="181.0" layoutY="196.0" prefHeight="50.0" prefWidth="210.0" stylesheets="@../css/login.css" />
-            <MFXButton id="btn" buttonType="RAISED" layoutX="198.0" layoutY="268.0" prefHeight="30.0" prefWidth="70.0" stylesheets="@../css/login.css" text="Log - in" />
-            <MFXButton id="btn" buttonType="RAISED" layoutX="300.0" layoutY="268.0" prefHeight="30.0" prefWidth="70.0" stylesheets="@../css/login.css" text="Sign - up" />
-            <Label id="title" layoutX="14.0" layoutY="7.0" stylesheets="@../css/login.css" text="SineZábava" />
+            <MFXTextField id="userId" layoutX="125.0" layoutY="277.0" prefHeight="50.0" prefWidth="210.0" stylesheets="@../css/login.css" />
+            <MFXPasswordField id="txtField" layoutX="126.0" layoutY="341.0" prefHeight="50.0" prefWidth="210.0" stylesheets="@../css/login.css" />
+            <MFXButton id="btn" fx:id="LoginBtn" buttonType="RAISED" layoutX="181.0" layoutY="446.0" onAction="#logIn" prefHeight="30.0" prefWidth="70.0" stylesheets="@../css/login.css" text="Log - in" />
+            <MFXButton id="btn" buttonType="RAISED" layoutX="321.0" layoutY="446.0" prefHeight="30.0" prefWidth="70.0" stylesheets="@../css/login.css" text="Sign - up" />
+            <ImageView fitHeight="185.0" fitWidth="321.0" layoutX="70.0" layoutY="23.0">
+               <image>
+                  <Image url="@../../../../../../SineZábava.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
-   </top>
+   </bottom>
 </BorderPane>
