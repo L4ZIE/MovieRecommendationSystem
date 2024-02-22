@@ -4,27 +4,33 @@ import dk.easv.entities.*;
 import dk.easv.presentation.model.AppModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.skin.LabeledSkinBase;
+import javafx.scene.image.ImageView;
 
 import java.net.URL;
 import java.util.*;
 
 public class AppController implements Initializable {
-    @FXML
-    private ListView<User> lvUsers;
-    @FXML
-    private ListView<Movie> lvTopForUser;
-    @FXML
-    private ListView<Movie> lvTopAvgNotSeen;
-    @FXML
-    private ListView<UserSimilarity> lvTopSimilarUsers;
-    @FXML
-    private ListView<TopMovie> lvTopFromSimilar;
-
 
     private AppModel model;
     private long timerStartMillis = 0;
     private String timerMsg = "";
+
+    @FXML
+    private Label top1Lbl, top2Lbl, top3Lbl, top4Lbl, top5Lbl, top6Lbl, top7Lbl;
+
+    @FXML
+    private Label rate1Lbl, rate2Lbl, rate3Lbl, rate4Lbl, rate5Lbl, rate6Lbl, rate7Lbl;
+
+    @FXML
+    private ImageView top1, top2, top3, top4, top5, top6, top7;
+
+    @FXML
+    private ImageView rate1, rate2, rate3, rate4, rate5, rate6, rate7;
+
+    private List<Movie> topMovies;
 
     private void startTimer(String message){
         timerStartMillis = System.currentTimeMillis();
@@ -41,24 +47,17 @@ public class AppController implements Initializable {
     }
 
     public void setModel(AppModel model) {
-        this.model = model;
-        lvUsers.setItems(model.getObsUsers());
-        lvTopForUser.setItems(model.getObsTopMovieSeen());
-        lvTopAvgNotSeen.setItems(model.getObsTopMovieNotSeen());
-        lvTopSimilarUsers.setItems(model.getObsSimilarUsers());
-        lvTopFromSimilar.setItems(model.getObsTopMoviesSimilarUsers());
+        model.loadData(model.getObsLoggedInUser());
 
-        startTimer("Load users");
-        model.loadUsers();
-        stopTimer();
+        topMovies = model.getObsTopMovieNotSeen();
+        topMovies.sort(Comparator.comparing(Movie::getAverageRating));
 
-        lvUsers.getSelectionModel().selectedItemProperty().addListener(
-                (observableValue, oldUser, selectedUser) -> {
-                    startTimer("Loading all data for user: " + selectedUser);
-                    model.loadData(selectedUser);
-                });
-
-        // Select the logged-in user in the listview, automagically trigger the listener above
-        lvUsers.getSelectionModel().select(model.getObsLoggedInUser());
+        top1Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        top2Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        top3Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        top4Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        top5Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        top6Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        top7Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
     }
 }
