@@ -219,7 +219,6 @@
                                        </VBox.margin></Label>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <VBox prefHeight="200.0" prefWidth="100.0" />
                                           <VBox prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="rate1" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
@@ -253,7 +252,7 @@
                                           <VBox prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="rate4" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
-                                                <Label fx:id="rateLbl" text="Label">
+                                                <Label fx:id="rate4Lbl" text="Label">
                                                    <VBox.margin>
                                                       <Insets left="40.0" top="10.0" />
                                                    </VBox.margin>
@@ -314,8 +313,8 @@
                                        <children>
                                           <VBox prefHeight="200.0" prefWidth="100.0">
                                              <children>
-                                                <ImageView fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
-                                                <Label text="Label">
+                                                <ImageView fx:id="pop1" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="pop1Lbl" text="Label">
                                                    <VBox.margin>
                                                       <Insets left="40.0" top="10.0" />
                                                    </VBox.margin>
@@ -324,8 +323,8 @@
                                           </VBox>
                                           <VBox prefHeight="200.0" prefWidth="100.0">
                                              <children>
-                                                <ImageView fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
-                                                <Label text="Label">
+                                                <ImageView fx:id="pop2" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="pop2Lbl" text="Label">
                                                    <VBox.margin>
                                                       <Insets left="40.0" top="10.0" />
                                                    </VBox.margin>
@@ -334,8 +333,8 @@
                                           </VBox>
                                           <VBox prefHeight="200.0" prefWidth="100.0">
                                              <children>
-                                                <ImageView fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
-                                                <Label text="Label">
+                                                <ImageView fx:id="pop3" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="pop3Lbl" text="Label">
                                                    <VBox.margin>
                                                       <Insets left="40.0" top="10.0" />
                                                    </VBox.margin>
@@ -344,8 +343,8 @@
                                           </VBox>
                                           <VBox prefHeight="200.0" prefWidth="100.0">
                                              <children>
-                                                <ImageView fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
-                                                <Label text="Label">
+                                                <ImageView fx:id="pop4" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="pop4Lbl" text="Label">
                                                    <VBox.margin>
                                                       <Insets left="40.0" top="10.0" />
                                                    </VBox.margin>
@@ -354,8 +353,8 @@
                                           </VBox>
                                           <VBox prefHeight="200.0" prefWidth="100.0">
                                              <children>
-                                                <ImageView fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
-                                                <Label text="Label">
+                                                <ImageView fx:id="pop5" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="pop5Lbl" text="Label">
                                                    <VBox.margin>
                                                       <Insets left="40.0" top="10.0" />
                                                    </VBox.margin>
@@ -364,8 +363,8 @@
                                           </VBox>
                                           <VBox prefHeight="200.0" prefWidth="100.0">
                                              <children>
-                                                <ImageView fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
-                                                <Label text="Label">
+                                                <ImageView fx:id="pop6" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="pop6Lbl" text="Label">
                                                    <VBox.margin>
                                                       <Insets left="40.0" top="10.0" />
                                                    </VBox.margin>
@@ -374,17 +373,8 @@
                                           </VBox>
                                           <VBox prefHeight="200.0" prefWidth="100.0">
                                              <children>
-                                                <ImageView fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
-                                                <Label text="Label">
-                                                   <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
-                                                   </VBox.margin>
-                                                </Label>
-                                             </children>
-                                          </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
-                                             <children>
-                                                <Label text="Label">
+                                                <ImageView fx:id="pop7" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="pop7Lbl" text="Label">
                                                    <VBox.margin>
                                                       <Insets left="40.0" top="10.0" />
                                                    </VBox.margin>
