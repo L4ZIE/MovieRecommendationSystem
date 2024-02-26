@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <children>
-      <ToolBar minHeight="50.0" prefHeight="56.0" prefWidth="900.0" style="-fx-background-color: #807e7e;">
+      <ToolBar minHeight="50.0" prefHeight="56.0" prefWidth="900.0" style="-fx-background-color: #494d6e;">
          <items>
             <Label prefHeight="17.0" prefWidth="262.0" text="SineZábava" />
             <TextField id="txtField" stylesheets="@../css/app.css" />
-            <MFXButton id="btn" stylesheets="@../css/app.css" text="Search" />
+            <MFXButton id="btnSearch" stylesheets="@../css/app.css" text="Search" />
          </items>
          <VBox.margin>
             <Insets />
@@ -28,74 +28,92 @@
       </ToolBar>
       <HBox prefHeight="683.0" prefWidth="900.0">
          <children>
-            <VBox prefHeight="664.0" prefWidth="67.0" style="-fx-background-color: #a19f9f;">
+            <VBox prefHeight="664.0" prefWidth="67.0" style="-fx-background-color: #5a5e87;">
                <children>
-                  <VBox prefHeight="80.0" prefWidth="69.0">
+                  <VBox id="icons" prefHeight="80.0" prefWidth="69.0">
                      <children>
-                        <ImageView fitHeight="40.0" fitWidth="40.0">
+                        <ImageView id="home" fitHeight="40.0" fitWidth="40.0">
                            <image>
                               <Image url="@../../../../../resources/icons/home_icon.png" />
                            </image>
-                        </ImageView>
-                        <Label text="Home">
                            <VBox.margin>
-                              <Insets left="4.0" />
+                              <Insets left="2.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label id="lblIcon" stylesheets="@../css/app.css" text="Home">
+                           <VBox.margin>
+                              <Insets left="2.0" />
                            </VBox.margin>
                         </Label>
                      </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
                   </VBox>
-                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="79.0">
+                  <VBox id="icons" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="79.0">
                      <children>
                         <ImageView fitHeight="40.0" fitWidth="40.0">
                            <image>
                               <Image url="@../../../../../resources/icons/film_icon.png" />
                            </image>
-                        </ImageView>
-                        <Label text="Movies">
                            <VBox.margin>
-                              <Insets left="1.0" />
+                              <Insets left="2.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label id="lblIcon" stylesheets="@../css/app.css" text="Movies">
+                           <VBox.margin>
+                              <Insets />
                            </VBox.margin>
                         </Label>
                      </children>
                   </VBox>
-                  <VBox layoutX="10.0" layoutY="105.0" prefHeight="80.0" prefWidth="79.0">
+                  <VBox id="icons" layoutX="10.0" layoutY="105.0" prefHeight="75.0" prefWidth="79.0">
                      <children>
                         <ImageView fitHeight="40.0" fitWidth="40.0">
                            <image>
                               <Image url="@../../../../../resources/icons/player_icon.png" />
                            </image>
-                        </ImageView>
-                        <Label text="Series">
                            <VBox.margin>
-                              <Insets left="4.0" />
+                              <Insets left="2.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label id="lblIcon" stylesheets="@../css/app.css" text="Series">
+                           <VBox.margin>
+                              <Insets left="3.0" />
                            </VBox.margin>
                         </Label>
                      </children>
                   </VBox>
-                  <VBox layoutX="10.0" layoutY="200.0" prefHeight="80.0" prefWidth="79.0">
+                  <VBox id="icons" layoutX="10.0" layoutY="200.0" prefHeight="80.0" prefWidth="79.0">
                      <children>
                         <ImageView fitHeight="45.0" fitWidth="45.0">
                            <image>
                               <Image url="@../../../../../resources/icons/star_icon.png" />
                            </image>
+                           <VBox.margin>
+                              <Insets left="2.0" />
+                           </VBox.margin>
                         </ImageView>
-                        <Label text="Top">
+                        <Label id="lblIcon" text="Top">
                            <VBox.margin>
                               <Insets left="10.0" />
                            </VBox.margin>
                         </Label>
                      </children>
                   </VBox>
-                  <VBox layoutX="10.0" layoutY="295.0" prefHeight="80.0" prefWidth="79.0">
+                  <VBox id="icons" layoutX="10.0" layoutY="295.0" prefHeight="80.0" prefWidth="79.0">
                      <children>
                         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../../../resources/icons/heart_icon.png" />
                            </image>
-                        </ImageView>
-                        <Label text="Best">
                            <VBox.margin>
-                              <Insets left="10.0" />
+                              <Insets left="2.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label id="lblIcon" text="Best">
+                           <VBox.margin>
+                              <Insets left="8.0" />
                            </VBox.margin>
                         </Label>
                      </children>
@@ -105,94 +123,252 @@
                   <Insets left="10.0" top="10.0" />
                </padding>
             </VBox>
-            <ScrollPane prefHeight="665.0" prefWidth="836.0">
+            <ScrollPane prefHeight="665.0" prefWidth="836.0" style="-fx-background-color: #313349;">
                <content>
-                  <VBox prefHeight="776.0" prefWidth="898.0">
+                  <VBox prefHeight="776.0" prefWidth="898.0" style="-fx-background-color: #313349;" stylesheets="@../css/app.css">
                      <children>
                         <HBox prefHeight="91.0" prefWidth="898.0">
                            <children>
-                              <ImageView fitHeight="242.0" fitWidth="825.0">
+                              <ImageView fitHeight="265.0" fitWidth="837.0">
                                  <image>
-                                    <Image url="@../../../../../resources/icons/movie_poster.png" />
+                                    <Image url="@../../../../../resources/icons/movie_poster.jpg" />
                                  </image>
                               </ImageView>
                            </children></HBox>
+                        <HBox layoutX="20.0" layoutY="285.0" prefHeight="213.0" prefWidth="830.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <MFXButton id="btn" text="Action">
+                                             <HBox.margin>
+                                                <Insets left="80.0" />
+                                             </HBox.margin>
+                                          </MFXButton>
+                                          <MFXButton id="btn" text="Romance">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </MFXButton>
+                                          <MFXButton id="btn" layoutX="10.0" layoutY="10.0" text="Drama">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </MFXButton>
+                                          <MFXButton id="btn" layoutX="65.0" layoutY="10.0" text="Thriller">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </MFXButton>
+                                          <MFXButton id="btn" layoutX="119.0" layoutY="10.0" text="Comedy">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </MFXButton>
+                                          <MFXButton id="btn" layoutX="174.0" layoutY="10.0" text="Horror">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </MFXButton>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" top="15.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="cat1" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="cat1Lbl" text="Label">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="cat2" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="cat2Lbl" text="Label">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="cat3" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="cat3Lbl" text="Label">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="cat4" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="cat4Lbl" text="Label">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="cat5" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="cat5Lbl" text="Label">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="cat6" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="cat6Lbl" text="Label">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <ImageView fx:id="cat7" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="cat7Lbl" text="Label">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
                         <HBox prefHeight="213.0" prefWidth="830.0">
                            <children>
                               <VBox prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <Label text="Continue watching">
+                                    <Label id="subTitle" text="Continue watching">
                                        <VBox.margin>
                                           <Insets bottom="10.0" />
                                        </VBox.margin></Label>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="top1" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="top1Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="top2" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="top2Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="top3" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="top3Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="top4" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="top4Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="top5" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="top5Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="top6" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="top6Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="top7" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="top7Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
@@ -213,81 +389,102 @@
                            <children>
                               <VBox prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <Label text="Trending">
+                                    <Label id="subTitle" text="Trending">
                                        <VBox.margin>
                                           <Insets bottom="10.0" />
                                        </VBox.margin></Label>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="rate1" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="rate1Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="rate2" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="rate2Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="rate3" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="rate3Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="rate4" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="rate4Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="rate5" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="rate5Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="rate6" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="rate6Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="rate7" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="rate7Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
                                        </children>
                                     </HBox>
@@ -305,78 +502,96 @@
                            <children>
                               <VBox prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <Label text="Recomended">
+                                    <Label id="subTitle" text="Recomended">
                                        <VBox.margin>
                                           <Insets bottom="10.0" />
                                        </VBox.margin></Label>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="pop1" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="pop1Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="pop2" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="pop2Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="pop3" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="pop3Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="pop4" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="pop4Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="pop5" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="pop5Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="pop6" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="pop6Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
                                           </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                          <VBox id="movie" prefHeight="200.0" prefWidth="100.0">
                                              <children>
                                                 <ImageView fx:id="pop7" fitHeight="165.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Label fx:id="pop7Lbl" text="Label">
                                                    <VBox.margin>
-                                                      <Insets left="40.0" top="10.0" />
+                                                      <Insets left="10.0" top="10.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
@@ -384,10 +599,13 @@
                                        </children>
                                     </HBox>
                                  </children>
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
                               </VBox>
                            </children>
                            <VBox.margin>
-                              <Insets left="10.0" top="20.0" />
+                              <Insets bottom="40.0" left="10.0" top="10.0" />
                            </VBox.margin>
                         </HBox>
                      </children>
