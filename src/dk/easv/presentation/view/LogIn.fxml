@@ -18,7 +18,7 @@
             <MFXButton id="btn" fx:id="SignupBtn" buttonType="RAISED" layoutX="229.0" layoutY="406.0" onAction="#signUp" prefHeight="30.0" prefWidth="70.0" stylesheets="@../css/login.css" text="Sign - up" />
             <ImageView fitHeight="167.0" fitWidth="297.0" layoutX="67.0" layoutY="57.0">
                <image>
-                  <Image url="@../../../../../resources/logo/SineZábava.png" />
+                  <Image url="/logo/SineZábava.png" />
                </image>
             </ImageView>
          </children>
