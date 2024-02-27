@@ -42,7 +42,7 @@
                      <children>
                         <ImageView fitHeight="40.0" fitWidth="40.0" preserveRatio="true">
                            <image>
-                              <Image url="@/icons/home_icon.jpg" />
+                              <Image url="@/icons/home_icon-removebg-preview.png" />
                            </image>
                            <VBox.margin>
                               <Insets left="2.0" />
@@ -62,7 +62,7 @@
                      <children>
                         <ImageView fitHeight="40.0" fitWidth="40.0">
                            <image>
-                              <Image url="@/icons/film_icon.jpg" />
+                              <Image url="@/icons/film_icon-removebg-preview.png" />
                            </image>
                            <VBox.margin>
                               <Insets left="2.0" />
@@ -79,7 +79,7 @@
                      <children>
                         <ImageView fitHeight="40.0" fitWidth="40.0">
                            <image>
-                              <Image url="@/icons/player_icon.jpg" />
+                              <Image url="@/icons/player_icon-removebg-preview.png" />
                            </image>
                            <VBox.margin>
                               <Insets left="2.0" />
@@ -96,7 +96,7 @@
                      <children>
                         <ImageView fitHeight="45.0" fitWidth="45.0">
                            <image>
-                              <Image url="@/icons/star_icon.jpg" />
+                              <Image url="@/icons/star_icon-removebg-preview.png" />
                            </image>
                            <VBox.margin>
                               <Insets left="2.0" />
@@ -113,7 +113,7 @@
                      <children>
                         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@/icons/heart_icon.jpg" />
+                              <Image url="@/icons/heart_icon-removebg-preview.png" />
                            </image>
                            <VBox.margin>
                               <Insets left="2.0" />
