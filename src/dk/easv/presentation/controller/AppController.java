@@ -2,6 +2,7 @@ package dk.easv.presentation.controller;
 
 import dk.easv.entities.*;
 import dk.easv.presentation.model.AppModel;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -163,5 +164,25 @@ public class AppController implements Initializable {
         cat5.setImage(randomImages.get(25));
         cat6.setImage(randomImages.get(26));
         cat7.setImage(randomImages.get(27));
+    }
+
+    public void categories(ActionEvent actionEvent) {
+        setRandomImages();
+
+        cat1.setImage(randomImages.get(28));
+        cat2.setImage(randomImages.get(29));
+        cat3.setImage(randomImages.get(30));
+        cat4.setImage(randomImages.get(31));
+        cat5.setImage(randomImages.get(32));
+        cat6.setImage(randomImages.get(33));
+        cat7.setImage(randomImages.get(34));
+
+        cat1Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat2Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat3Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat4Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat5Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat6Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat7Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
     }
 }

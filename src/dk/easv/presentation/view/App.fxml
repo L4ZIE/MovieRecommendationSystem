@@ -2,6 +2,7 @@
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
@@ -15,7 +16,14 @@
    <children>
       <ToolBar minHeight="50.0" prefHeight="56.0" prefWidth="900.0" style="-fx-background-color: #494d6e;">
          <items>
-            <Label prefHeight="17.0" prefWidth="262.0" text="SineZábava" />
+            <ImageView fitHeight="60.0" fitWidth="140.0">
+               <image>
+                  <Image url="@../../../../../resources/logo/logo_.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
             <TextField id="txtField" stylesheets="@../css/app.css" />
             <MFXButton id="btnSearch" stylesheets="@../css/app.css" text="Search" />
          </items>
@@ -23,7 +31,7 @@
             <Insets />
          </VBox.margin>
          <padding>
-            <Insets left="400.0" />
+            <Insets left="350.0" />
          </padding>
       </ToolBar>
       <HBox prefHeight="683.0" prefWidth="900.0">
@@ -141,32 +149,32 @@
                                  <children>
                                     <HBox>
                                        <children>
-                                          <MFXButton id="btn" text="Action">
+                                          <MFXButton id="btn" onAction="#categories" text="Action">
                                              <HBox.margin>
                                                 <Insets left="80.0" />
                                              </HBox.margin>
                                           </MFXButton>
-                                          <MFXButton id="btn" text="Romance">
+                                          <MFXButton id="btn" onAction="#categories" text="Romance">
                                              <HBox.margin>
                                                 <Insets left="30.0" />
                                              </HBox.margin>
                                           </MFXButton>
-                                          <MFXButton id="btn" layoutX="10.0" layoutY="10.0" text="Drama">
+                                          <MFXButton id="btn" layoutX="10.0" layoutY="10.0" onAction="#categories" text="Drama">
                                              <HBox.margin>
                                                 <Insets left="30.0" />
                                              </HBox.margin>
                                           </MFXButton>
-                                          <MFXButton id="btn" layoutX="65.0" layoutY="10.0" text="Thriller">
+                                          <MFXButton id="btn" layoutX="65.0" layoutY="10.0" onAction="#categories" text="Thriller">
                                              <HBox.margin>
                                                 <Insets left="30.0" />
                                              </HBox.margin>
                                           </MFXButton>
-                                          <MFXButton id="btn" layoutX="119.0" layoutY="10.0" text="Comedy">
+                                          <MFXButton id="btn" layoutX="119.0" layoutY="10.0" onAction="#categories" text="Comedy">
                                              <HBox.margin>
                                                 <Insets left="30.0" />
                                              </HBox.margin>
                                           </MFXButton>
-                                          <MFXButton id="btn" layoutX="174.0" layoutY="10.0" text="Horror">
+                                          <MFXButton id="btn" layoutX="174.0" layoutY="10.0" onAction="#categories" text="Horror">
                                              <HBox.margin>
                                                 <Insets left="30.0" />
                                              </HBox.margin>
