@@ -12,13 +12,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <children>
       <ToolBar minHeight="50.0" prefHeight="56.0" prefWidth="900.0" style="-fx-background-color: #494d6e;">
          <items>
             <ImageView fitHeight="60.0" fitWidth="140.0">
                <image>
-                  <Image url="@../../../../../resources/logo/logo_.png" />
+                  <Image url="@/logo/SineZábava.png" />
                </image>
                <viewport>
                   <Rectangle2D />
@@ -40,9 +40,9 @@
                <children>
                   <VBox id="icons" prefHeight="80.0" prefWidth="69.0">
                      <children>
-                        <ImageView id="home" fitHeight="40.0" fitWidth="40.0">
+                        <ImageView fitHeight="40.0" fitWidth="40.0" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../resources/icons/home_icon.png" />
+                              <Image url="@/icons/home_icon.jpg" />
                            </image>
                            <VBox.margin>
                               <Insets left="2.0" />
@@ -62,7 +62,7 @@
                      <children>
                         <ImageView fitHeight="40.0" fitWidth="40.0">
                            <image>
-                              <Image url="@../../../../../resources/icons/film_icon.png" />
+                              <Image url="@/icons/film_icon.jpg" />
                            </image>
                            <VBox.margin>
                               <Insets left="2.0" />
@@ -79,7 +79,7 @@
                      <children>
                         <ImageView fitHeight="40.0" fitWidth="40.0">
                            <image>
-                              <Image url="@../../../../../resources/icons/player_icon.png" />
+                              <Image url="@/icons/player_icon.jpg" />
                            </image>
                            <VBox.margin>
                               <Insets left="2.0" />
@@ -96,7 +96,7 @@
                      <children>
                         <ImageView fitHeight="45.0" fitWidth="45.0">
                            <image>
-                              <Image url="@../../../../../resources/icons/star_icon.png" />
+                              <Image url="@/icons/star_icon.jpg" />
                            </image>
                            <VBox.margin>
                               <Insets left="2.0" />
@@ -113,7 +113,7 @@
                      <children>
                         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../resources/icons/heart_icon.png" />
+                              <Image url="@/icons/heart_icon.jpg" />
                            </image>
                            <VBox.margin>
                               <Insets left="2.0" />
@@ -139,7 +139,7 @@
                            <children>
                               <ImageView fitHeight="265.0" fitWidth="837.0">
                                  <image>
-                                    <Image url="@../../../../../resources/icons/movie_poster.jpg" />
+                                    <Image url="@/icons/movie_poster.jpg" />
                                  </image>
                               </ImageView>
                            </children></HBox>
