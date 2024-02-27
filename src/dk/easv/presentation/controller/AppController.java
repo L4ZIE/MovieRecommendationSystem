@@ -2,6 +2,7 @@ package dk.easv.presentation.controller;
 
 import dk.easv.entities.*;
 import dk.easv.presentation.model.AppModel;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -27,6 +28,9 @@ public class AppController implements Initializable {
     private String timerMsg = "";
 
     @FXML
+    private Label cat1Lbl, cat2Lbl, cat3Lbl, cat4Lbl, cat5Lbl, cat6Lbl, cat7Lbl;
+
+    @FXML
     private Label top1Lbl, top2Lbl, top3Lbl, top4Lbl, top5Lbl, top6Lbl, top7Lbl;
 
     @FXML
@@ -34,6 +38,9 @@ public class AppController implements Initializable {
 
     @FXML
     private Label pop1Lbl, pop2Lbl, pop3Lbl, pop4Lbl, pop5Lbl, pop6Lbl, pop7Lbl;
+
+    @FXML
+    private ImageView cat1, cat2, cat3, cat4, cat5, cat6, cat7;
 
     @FXML
     private ImageView top1, top2, top3, top4, top5, top6, top7;
@@ -71,6 +78,14 @@ public class AppController implements Initializable {
 
         topMovies = model.getObsTopMovieNotSeen();
         topMovies.sort(Comparator.comparing(Movie::getAverageRating));
+
+        cat1Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat2Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat3Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat4Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat5Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat6Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat7Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
 
         top1Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
         top2Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
@@ -117,6 +132,7 @@ public class AppController implements Initializable {
 
     private void setImages(){
         setRandomImages();
+
         top1.setImage(randomImages.get(1));
         top2.setImage(randomImages.get(2));
         top3.setImage(randomImages.get(3));
@@ -140,5 +156,33 @@ public class AppController implements Initializable {
         rate5.setImage(randomImages.get(18));
         rate6.setImage(randomImages.get(19));
         rate7.setImage(randomImages.get(20));
+
+        cat1.setImage(randomImages.get(21));
+        cat2.setImage(randomImages.get(22));
+        cat3.setImage(randomImages.get(23));
+        cat4.setImage(randomImages.get(24));
+        cat5.setImage(randomImages.get(25));
+        cat6.setImage(randomImages.get(26));
+        cat7.setImage(randomImages.get(27));
+    }
+
+    public void categories(ActionEvent actionEvent) {
+        setRandomImages();
+
+        cat1.setImage(randomImages.get(28));
+        cat2.setImage(randomImages.get(29));
+        cat3.setImage(randomImages.get(30));
+        cat4.setImage(randomImages.get(31));
+        cat5.setImage(randomImages.get(32));
+        cat6.setImage(randomImages.get(33));
+        cat7.setImage(randomImages.get(34));
+
+        cat1Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat2Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat3Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat4Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat5Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat6Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
+        cat7Lbl.setText(topMovies.get((int) (Math.random() * topMovies.size())).getTitle());
     }
 }

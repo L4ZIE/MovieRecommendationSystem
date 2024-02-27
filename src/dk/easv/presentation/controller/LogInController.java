@@ -44,6 +44,8 @@ public class LogInController implements Initializable {
             AppController controller = loader.getController();
             controller.setModel(model);
 
+            ((Node)((Button)actionEvent.getSource())).getScene().getWindow().hide();
+
         } catch (IOException e) {
             e.printStackTrace();
             Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load App.fxml");
